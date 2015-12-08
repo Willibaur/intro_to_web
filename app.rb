@@ -5,10 +5,12 @@ get '/' do
 end
 
 post '/named-cat' do
-  @name = params[:name]
+  p params
+  @name   = params[:name]
+  @animal = params[:animal]
   erb(:index)
 end
 
-get '/form' do
+get '/cat-form' do
   erb(:form)
 end
